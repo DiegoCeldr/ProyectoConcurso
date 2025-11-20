@@ -1,4 +1,21 @@
 body {
-    background-image: url(imagenfondo.jpeg)
-    
+    background-image: url(imagenfondo.jpeg);
+    background-size: cover;
+}
+
+.bloqueA {
+    width: 80vw;
+    margin: 50px auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.subbloque1A{
+    display: flex;
+    gap: 20px;
+}
+
+.subbloque2A {
+    width: 40vw;
+    padding: 10px;
 }
