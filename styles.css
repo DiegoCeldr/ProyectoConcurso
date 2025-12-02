@@ -3,19 +3,41 @@ body {
     background-size: cover;
 }
 
-.bloqueA {
+.BloqueA {
     width: 80vw;
     margin: 50px auto;
     display: flex;
     justify-content: space-between;
 }
 
-.subbloque1A{
+.SubBloque1A{
     display: flex;
     gap: 20px;
 }
 
-.subbloque2A {
+.SubBloque1A > .gif,
+.SubBloque1A > .imagen {
+  flex: 0 0 calc(50% - 10px);
+}
+
+.SubBloque2A {
     width: 40vw;
     padding: 10px;
+}
+
+
+.imagen {
+    width: 100%;
+    height: auto;
+    display: block;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+.SubBloque1A img {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    display: block;
+    object-fit: contain;
 }
