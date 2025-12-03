@@ -8,6 +8,7 @@ body {
     margin: 50px auto;
     display: flex;
     justify-content: space-between;
+    gap: 50px;
 }
 
 .SubBloque1A{
@@ -15,17 +16,18 @@ body {
     border-radius: 15px;
     padding: 15px;
     display: flex;
-    gap: 0px;
 }
 
 .SubBloque1A > .gif,
 .SubBloque1A > .imagen {
-  flex: 0 0 calc(50%);
+  flex: 1 1 calc(50%);
 }
 
 .SubBloque2A {
     width: 60vw;
-    padding: 10px;
+    background-color: rgba(255, 0, 0, 0.6);
+    border-radius: 15px;
+    padding: 15px;
 }
 
 .imagen img {
@@ -34,6 +36,10 @@ body {
     max-width: 75%;
     display: block;
     object-fit: contain;
+}
+
+.imagen {
+    background-color: rgba(255, 255, 255, 0.6);
 }
 
 .gif img {
