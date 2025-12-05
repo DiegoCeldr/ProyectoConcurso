@@ -37,9 +37,9 @@ body {
 }
 
 .imagen img {
-    width: 75%;
+    width: 375px;
     height: auto;
-    max-width: 75%;
+    max-width: none;
     display: block;
     object-fit: contain;
     margin-right: auto;
@@ -51,12 +51,38 @@ body {
 }
 
 .gif img {
-    width: 75%;
+    width: 375px;
     height: auto;
-    max-width: 75%;
+    max-width: none;
     display: block;
     object-fit: contain;
     margin-left: auto;
     margin-right: 20px;
     transform: translateX(-20px);
+}
+
+
+.gif {
+    overflow: hidden;
+}
+
+.TituloPagina {
+    text-align: center;
+    margin: 20px 0 10px;
+    color: Black;
+}
+
+.Subtitulo {
+    text-align: left;
+    width: 80vw;
+    margin: 0 auto 20px;
+    color: black;
+    font-size: 2rem;
+}
+
+.SubtituloContenedor {
+    background-color: rgba(255, 0, 0, 0.6);
+    padding: 6px 10px;
+    border-radius: 8px;
+    display: inline-block;
 }
