@@ -18,11 +18,6 @@ body {
     display: flex;
 }
 
-.SubBloque1A > .gif,
-.SubBloque1A > .imagen {
-  flex: 0 0 calc(50%);
-}
-
 .SubBloque2A {
     width: 60vw;
     background-color: rgba(255, 0, 0, 0.6);
