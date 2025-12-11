@@ -1,9 +1,28 @@
 body {
     background-image: url(imagenfondo.jpeg);
     background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
 }
 
 .BloqueA {
+    width: 80vw;
+    margin: 50px auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.BloqueB {
+    width: 80vw;
+    margin: 50px auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.BloqueC {
     width: 80vw;
     margin: 50px auto;
     display: flex;
@@ -18,9 +37,37 @@ body {
     display: flex;
 }
 
+.SubBloque1B{
+    background-color: rgba(0, 102, 204, 0.6);
+    border-radius: 15px;
+    padding: 15px;
+    display: flex;
+}
+
+.SubBloque1C{
+    background-color: rgba(255, 140, 0, 0.6);
+    border-radius: 15px;
+    padding: 15px;
+    display: flex;
+}
+
 .SubBloque2A {
     width: 60vw;
     background-color: rgba(255, 0, 0, 0.6);
+    border-radius: 15px;
+    padding: 15px;
+}
+
+.SubBloque2B {
+    width: 60vw;
+    background-color: rgba(0, 102, 204, 0.6);
+    border-radius: 15px;
+    padding: 15px;
+}
+
+.SubBloque2C {
+    width: 60vw;
+    background-color: rgba(255, 140, 0, 0.6);
     border-radius: 15px;
     padding: 15px;
 }
@@ -77,6 +124,20 @@ body {
 
 .SubtituloContenedor {
     background-color: rgba(255, 0, 0, 0.6);
+    padding: 6px 10px;
+    border-radius: 8px;
+    display: inline-block;
+}
+
+.SubtituloContenedorB {
+    background-color: rgba(0, 102, 204, 0.6);
+    padding: 6px 10px;
+    border-radius: 8px;
+    display: inline-block;
+}
+
+.SubtituloContenedorC {
+    background-color: rgba(255, 140, 0, 0.6);
     padding: 6px 10px;
     border-radius: 8px;
     display: inline-block;
