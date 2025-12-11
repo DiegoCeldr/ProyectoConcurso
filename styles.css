@@ -22,6 +22,14 @@ body {
     gap: 50px;
 }
 
+.BloqueC {
+    width: 80vw;
+    margin: 50px auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+}
+
 .SubBloque1A{
     background-color: rgba(255, 0, 0, 0.6);
     border-radius: 15px;
@@ -31,6 +39,13 @@ body {
 
 .SubBloque1B{
     background-color: rgba(0, 102, 204, 0.6);
+    border-radius: 15px;
+    padding: 15px;
+    display: flex;
+}
+
+.SubBloque1C{
+    background-color: rgba(255, 140, 0, 0.6);
     border-radius: 15px;
     padding: 15px;
     display: flex;
@@ -46,6 +61,13 @@ body {
 .SubBloque2B {
     width: 60vw;
     background-color: rgba(0, 102, 204, 0.6);
+    border-radius: 15px;
+    padding: 15px;
+}
+
+.SubBloque2C {
+    width: 60vw;
+    background-color: rgba(255, 140, 0, 0.6);
     border-radius: 15px;
     padding: 15px;
 }
@@ -109,6 +131,13 @@ body {
 
 .SubtituloContenedorB {
     background-color: rgba(0, 102, 204, 0.6);
+    padding: 6px 10px;
+    border-radius: 8px;
+    display: inline-block;
+}
+
+.SubtituloContenedorC {
+    background-color: rgba(255, 140, 0, 0.6);
     padding: 6px 10px;
     border-radius: 8px;
     display: inline-block;
