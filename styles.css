@@ -1,9 +1,20 @@
 body {
     background-image: url(imagenfondo.jpeg);
     background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
 }
 
 .BloqueA {
+    width: 80vw;
+    margin: 50px auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.BloqueB {
     width: 80vw;
     margin: 50px auto;
     display: flex;
