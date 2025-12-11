@@ -32,6 +32,13 @@ body {
     padding: 15px;
 }
 
+.SubBloque2B {
+    width: 60vw;
+    background-color: rgba(0, 102, 204, 0.6);
+    border-radius: 15px;
+    padding: 15px;
+}
+
 .texto p {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 25px;
@@ -84,6 +91,13 @@ body {
 
 .SubtituloContenedor {
     background-color: rgba(255, 0, 0, 0.6);
+    padding: 6px 10px;
+    border-radius: 8px;
+    display: inline-block;
+}
+
+.SubtituloContenedorB {
+    background-color: rgba(0, 102, 204, 0.6);
     padding: 6px 10px;
     border-radius: 8px;
     display: inline-block;
