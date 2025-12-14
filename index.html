@@ -76,5 +76,51 @@
             </div>
         </div>
     </section>
+    <section class="BloqueA">
+        <div class="SubBloque2A" style="display: block;">
+            <label for="videoSelect">Selecciona personaje</label>
+            <br>
+            <select id="videoSelect">
+                <option value="">Selecciona...</option>
+                <option value="Clairen">Clairen</option>
+                <option value="Loxodont">Loxodont</option>
+                <option value="Zetterburn">Zetterburn</option>
+                <option value="Absa">Absa</option>
+                <option value="Galvan">Galvan</option>
+                <option value="Ranno">Ranno</option>
+                <option value="Wrastor">Wrastor</option>
+                <option value="Etalus">Etalus</option>
+            </select>
+            <br>
+            <video id="videoPlayer" width="800" controls style="display:none"></video>
+        </div>
+    </section>
+    <script>
+    const select = document.getElementById('videoSelect');
+    const player = document.getElementById('videoPlayer');
+    const sources = {
+        'Clairen': 'videos/clairen.mp4',
+        'Loxodont': 'videos/loxodont.mp4',
+        'Zetterburn': 'videos/zetterburn.mp4',
+        'Absa': 'videos/absa.mp4',
+        'Galvan': 'videos/galvan.mp4',
+        'Ranno': 'videos/ranno.mp4',
+        'Wrastor': 'videos/wrastor.mp4',
+        'Etalus': 'videos/etalus.mp4'
+    };
+    select.addEventListener('change', function() {
+        const value = select.value;
+        const src = sources[value];
+        if (src) {
+            player.src = src;
+            player.style.display = 'block';
+            player.load();
+        } else {
+            player.pause();
+            player.removeAttribute('src');
+            player.style.display = 'none';
+        }
+    });
+    </script>
 </body>
 </html>
