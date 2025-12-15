@@ -4,6 +4,49 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
+    padding-top: 72px;
+}
+
+.HeaderBar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 24px;
+    z-index: 1000;
+}
+
+.HeaderBar .TituloPagina {
+    color: #fff;
+    margin: 0;
+    text-align: left;
+}
+
+.Nav {
+    display: flex;
+    gap: 12px;
+}
+
+.Nav a {
+    background-color: #fff;
+    color: #000;
+    padding: 8px 12px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.Nav a:hover {
+    opacity: 0.85;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 .BloqueA {
