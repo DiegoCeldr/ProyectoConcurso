@@ -19,6 +19,8 @@ body {
     justify-content: space-between;
     padding: 12px 24px;
     z-index: 1000;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    backdrop-filter: saturate(120%) blur(6px);
 }
 
 .HeaderBar .TituloPagina {
@@ -32,6 +34,16 @@ body {
     gap: 12px;
 }
 
+.NavToggle {
+    display: none;
+    background: #fff;
+    color: #000;
+    border: none;
+    border-radius: 6px;
+    padding: 8px 12px;
+    font-weight: 600;
+}
+
 .Nav a {
     background-color: #fff;
     color: #000;
@@ -39,6 +51,7 @@ body {
     border-radius: 6px;
     text-decoration: none;
     font-weight: 600;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
 }
 
 .Nav a:hover {
@@ -49,77 +62,95 @@ html {
     scroll-behavior: smooth;
 }
 
-.BloqueA {
-    width: 80vw;
-    margin: 50px auto;
-    display: flex;
-    justify-content: space-between;
-    gap: 50px;
-}
-
-.BloqueB {
-    width: 80vw;
-    margin: 50px auto;
-    display: flex;
-    justify-content: space-between;
-    gap: 50px;
-}
-
+.BloqueA,
+.BloqueB,
 .BloqueC {
-    width: 80vw;
-    margin: 50px auto;
+    width: 90vw;
+    max-width: 1100px;
+    margin: 32px auto;
     display: flex;
-    justify-content: space-between;
-    gap: 50px;
+    justify-content: center;
+    gap: 24px;
 }
 
 .BloqueVideos {
-    width: 80vw;
-    margin: 50px auto;
+    width: 90vw;
+    max-width: 1100px;
+    margin: 32px auto;
     display: flex;
     justify-content: center;
 }
 
 .SubBloque1A{
     background-color: rgba(255, 0, 0, 0.6);
-    border-radius: 15px;
-    padding: 15px;
+    border-radius: 16px;
+    padding: 20px;
     display: flex;
+    align-items: center;
+    gap: 16px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.25);
 }
 
 .SubBloque1B{
     background-color: rgba(0, 102, 204, 0.6);
-    border-radius: 15px;
-    padding: 15px;
+    border-radius: 16px;
+    padding: 20px;
     display: flex;
+    align-items: center;
+    gap: 16px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.25);
 }
 
 .SubBloque1C{
     background-color: rgba(255, 140, 0, 0.6);
-    border-radius: 15px;
-    padding: 15px;
+    border-radius: 16px;
+    padding: 20px;
     display: flex;
+    align-items: center;
+    gap: 16px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+}
+
+.SubBloque1A > .gif, .SubBloque1A > .imagen,
+.SubBloque1B > .gif, .SubBloque1B > .imagen,
+.SubBloque1C > .gif, .SubBloque1C > .imagen {
+    flex: 1 1 0;
+}
+
+.BloqueA > .SubBloque1A,
+.BloqueB > .SubBloque1B,
+.BloqueC > .SubBloque1C {
+    flex: 1.2 1 0;
+}
+
+.BloqueA > .SubBloque2A,
+.BloqueB > .SubBloque2B,
+.BloqueC > .SubBloque2C {
+    flex: 1 1 0;
 }
 
 .SubBloque2A {
-    width: 60vw;
+    width: auto;
     background-color: rgba(255, 0, 0, 0.6);
-    border-radius: 15px;
-    padding: 15px;
+    border-radius: 16px;
+    padding: 16px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.25);
 }
 
 .SubBloque2B {
-    width: 60vw;
+    width: auto;
     background-color: rgba(0, 102, 204, 0.6);
-    border-radius: 15px;
-    padding: 15px;
+    border-radius: 16px;
+    padding: 16px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.25);
 }
 
 .SubBloque2C {
-    width: 60vw;
+    width: auto;
     background-color: rgba(255, 140, 0, 0.6);
-    border-radius: 15px;
-    padding: 15px;
+    border-radius: 16px;
+    padding: 16px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.25);
 }
 
 .SubBloque2Videos {
@@ -134,31 +165,24 @@ html {
     font-style: italic;
 }
 
-.imagen img {
-    width: 375px;
-    height: auto;
-    max-width: none;
-    display: block;
-    object-fit: contain;
-    margin-right: auto;
+.imagen,
+.gif {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.15);
+    border-radius: 12px;
+    padding: 8px;
 }
 
-.imagen {
-    background-color: rgba(255, 255, 255, 0.6);
-    transform: translateX(-20px);
-}
-
+.imagen img,
 .gif img {
-    width: 375px;
+    width: 100%;
     height: auto;
-    max-width: none;
+    max-width: 420px;
     display: block;
     object-fit: contain;
-    margin-left: auto;
-    margin-right: 20px;
-    transform: translateX(-20px);
 }
-
 
 .gif {
     overflow: hidden;
@@ -172,10 +196,10 @@ html {
 
 .Subtitulo {
     text-align: left;
-    width: 80vw;
+    width: 90vw;
     margin: 0 auto 20px;
     color: black;
-    font-size: 2rem;
+    font-size: 1.8rem;
 }
 
 .SubtituloContenedor {
@@ -197,4 +221,112 @@ html {
     padding: 6px 10px;
     border-radius: 8px;
     display: inline-block;
+}
+
+.Comentarios {
+    width: 90vw;
+    max-width: 180px;
+    margin: 4px auto;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 12px;
+    padding: 4px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.Comentarios h3 {
+    margin: 0 0 4px;
+    font-size: 0.9rem;
+}
+
+.ComentariosLista {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 4px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2px;
+    max-height: 40px;
+    overflow-y: auto;
+}
+
+.ComentariosLista li {
+    background: #fff;
+    border-radius: 8px;
+    padding: 4px 5px;
+    font-size: 0.8rem;
+}
+
+.ComentariosForm {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 4px;
+}
+
+.ComentariosForm input {
+    padding: 4px 6px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 0.8rem;
+}
+
+.ComentariosForm button {
+    padding: 5px 8px;
+    border-radius: 6px;
+    border: none;
+    font-weight: 600;
+    background: #000;
+    color: #fff;
+    font-size: 0.8rem;
+    width: 100%;
+}
+
+@media (max-width: 1024px) {
+    .BloqueA, .BloqueB, .BloqueC {
+        gap: 16px;
+    }
+    .SubBloque2A, .SubBloque2B, .SubBloque2C {
+        width: 100%;
+    }
+    .imagen img,
+    .gif img {
+        max-width: 360px;
+    }
+}
+
+@media (max-width: 768px) {
+    .HeaderBar {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    .NavToggle {
+        display: inline-block;
+    }
+    .Nav {
+        width: 100%;
+        display: none;
+    }
+    .Nav.open {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .BloqueA, .BloqueB, .BloqueC {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .SubBloque1A, .SubBloque1B, .SubBloque1C {
+        flex-direction: column;
+    }
+    .imagen, .gif {
+        transform: none;
+    }
+    .Subtitulo {
+        font-size: 1.6rem;
+    }
+    .ComentariosForm {
+        grid-template-columns: 1fr;
+    }
+    .BloqueVideos video {
+        width: 100%;
+        max-width: 100%;
+    }
 }
